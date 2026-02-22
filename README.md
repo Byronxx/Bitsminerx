@@ -1,2 +1,139 @@
 # Bitsminerx
 Landing page for Bitsminerx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BETSMINERX (BTX)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Orbitron', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(to bottom, #0a0a0a, #1a1a1a); 
+            color: #ffd700; 
+            text-align: center; 
+            overflow-x: hidden; 
+        }
+        header { 
+            background: linear-gradient(to right, #ffd700, #000000); 
+            padding: 60px 20px; 
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); 
+            position: relative; 
+        }
+        .logo { max-width: 250px; margin-bottom: 20px; filter: drop-shadow(0 0 10px #ffd700); }
+        h1 { font-size: 3em; text-shadow: 0 0 15px #ffd700; margin: 10px 0; }
+        .tagline { font-size: 1.5em; opacity: 0.9; }
+        section { padding: 50px 20px; max-width: 900px; margin: 0 auto; }
+        h2 { font-size: 2em; text-shadow: 0 0 10px #ffd700; margin-bottom: 20px; }
+        p { font-size: 1.2em; line-height: 1.6; }
+        .cta-button { 
+            display: inline-block; 
+            background: linear-gradient(to right, #ffd700, #d4af37); 
+            color: #000; 
+            padding: 15px 40px; 
+            font-size: 1.2em; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin-top: 20px; 
+            box-shadow: 0 0 15px #ffd700; 
+            transition: transform 0.3s; 
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        .buy-button {
+            display: inline-block;
+            background: linear-gradient(to right, #ff4500, #ff8c00); /* Eye-catching orange-gold gradient */
+            color: #fff;
+            padding: 20px 50px;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0 0 20px #ff4500, 0 0 30px #ffd700;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: pulse 2s infinite;
+        }
+        .buy-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #ff4500, 0 0 40px #ffd700;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .copy-button {
+            background: linear-gradient(to right, #ffd700, #d4af37);
+            color: #000;
+            border: none;
+            padding: 8px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            box-shadow: 0 0 10px #ffd700;
+            transition: transform 0.3s;
+        }
+        .copy-button:hover { transform: scale(1.05); }
+        .address-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .address-text {
+            font-size: 1.2em;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 70%;
+        }
+        footer { background: #000; padding: 20px; font-size: 0.9em; }
+        a { color: #ffd700; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="your-logo-url.png" alt="BETSMINERX Logo" class="logo">
+        <h1>BETSMINERX (BTX)</h1>
+        <p class="tagline">Evolution in Progress: AI-Powered Mining Meets High-Stakes Sports Betting</p>
+        <a href="https://pancakeswap.finance/swap?outputCurrency=0xbe9285736cbbf71bdefee8ae17c2ac8cd6bb8b60" class="buy-button">Buy $BTX</a>
+    </header>
+    <section>
+        <h2>About BETSMINERX</h2>
+        <p>BETSMINERX is a cutting-edge BEP-20 token revolutionizing the crypto space with AI-driven mining algorithms and seamless integration into sports betting ecosystems. Harness the power of intelligent tech for optimized yields and thrilling wagers. The Empire is Loading – join the future of decentralized gaming and finance.</p>
+    </section>
+    <section>
+        <h2>Token Details</h2>
+        <div class="address-container">
+            <p class="address-text" id="contract-address">Contract Address: 0xbe9285736cbbf71bdefee8ae17c2ac8cd6bb8b60</p>
+            <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+        </div>
+        <p>Symbol: BTX</p>
+        <p>Total Supply: 1,000,000,000 (Customize as needed)</p>
+    </section>
+    <section>
+        <h2>Connect With Us</h2>
+        <p><a href="https://twitter.com/yourhandle">Twitter</a> | <a href="https://t.me/yourgroup">Telegram</a> | <a href="https://yourwhitepaper.pdf">Whitepaper</a></p>
+        <a href="https://t.me/yourgroup" class="cta-button">Join Community</a> <!-- Replace with your actual link -->
+    </section>
+    <footer>
+        <p>&copy; 2026 BETSMINERX. All rights reserved. Evolution in Progress.</p>
+    </footer>
+    <script>
+        function copyToClipboard() {
+            const text = document.getElementById('contract-address').innerText.split(': ')[1].trim();
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Contract address copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
